@@ -1,11 +1,12 @@
 <html lang="en">
   <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Album example · Bootstrap</title>
+    <title>Homepage</title>
 
   <!--  <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/"> -->
 
@@ -54,20 +55,22 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a href="" class="navbar-brand">Peter</a>
+        <a href="{% url 'home'%}" class="navbar-brand active">
+          <img src="{% static 'lo.png'%}" height=40/>Django-Creatives
+        </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarmenu">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarmenu">
           <ul class="navbar-nav  ml-auto" >
             <li class="nav-item">
-              <a href="" class="nav-link">Twitter</a>
+              <a href="http://twitter.com//petergitz" class="nav-link">Twitter</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Resume</a>
+              <a href="{% static 'resume.pdf' %}" class="nav-link">Resume</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Blog</a>
+              <a href="{% url 'allblogs'%}" class="nav-link">Blog</a>
             </li>
           </ul>
         </div>
@@ -81,14 +84,15 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1>Hi, i'M Peter</h1>
-      <p class="lead text-muted">Hi,i'm Peter and i love to make django websites.Email me to get custom websites.</p>
+      <h1 class="text-dark">Hi.I'm Peter.</h1>
+      <p class="lead text-muted "><b>I'm a freelance web developer.I have specialized in e-commerce websites.Take a look at my work below and feel free to email me if you are interested in working with me.</b></p>
       <p>
         <a href="mailto:petergitzz@icloud.com" class="btn btn-primary my-2">Email me</a>
       </p>
+      <img src="{%static 'gitz.JPG'%}"  height="300" />
     </div>
   </section>
-  <div class="row">
+  <div class="row ">
     {%for job in jobs.all%}
          <div class="col-md-4">
            <div class="card mb-4 shadow-sm">
@@ -111,9 +115,6 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-Official Themes
-Take Bootstrap 4 to the next level with official premium themes—toolkits built on Bootstrap with new components and plugins, docs, and build tools.
 
-Bootstrap Themes
 </body>
 </html>
