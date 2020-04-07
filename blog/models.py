@@ -5,7 +5,7 @@ from django.db import models
 class Blogs(models.Model):
     title =models.CharField(max_length=500)
     pub_date=models.DateField(auto_now_add=False)
-    body = models.TextField(max_length=200)
+    body = models.TextField(max_length=500)
     image = models.ImageField(upload_to="images/")
 
     def summary(self):
